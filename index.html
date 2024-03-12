@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Design
+		</h1>
+
+		<p>
+			<strong>Neha Hulkund</strong> — <em>nhulkund@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Phase One: Sketching Visualizations</h2>
+			<p> Question to answer: How did the age density change between 1990 and 2000 between different age
+				demographic groups?</p>
+
+			<figure>
+				<img src="figs/Fig1.png" alt="" />
+				<figcaption>
+					This proposed figure shows the 1900 and 2000 census data as population pyramids, with male on the
+					left axis and female on the right axis.
+					The x-axis has the population size and the y-axis separates the ages into bins to display the data
+					like a dual-axis histogram.
+
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>The 1900 and 2000 figures are placed side by side, so comparison can be done between them to see how
+					the overall shapes of the population pyramid shape has changed between the years. </li>
+				<li>One strength is that it is the expected way a user reads a population pyramid (for example,
+					ecological textbooks use this format of the male/female split), so the reader will more quickly
+					understand the figure.</li>
+				<li>However, its primary weakness is that because the two years of comparison are side by side, there is
+					no shared axis to compare the two years and the reader must switch between them to understand the
+					plot. Perhaps displaying on the same plot might be helpful for the next plot.</li>
+			</ul>
+
+			<figure>
+				<img src="figs/Fig2.png" alt="" />
+				<figcaption>
+					The proposed figure shows the 1900 and 2000 census data as population pyramids overlaid with each
+					other, with male on the left axis and female on the right axis.
+					The x-axis has the population size and the y-axis separates the ages into bins to display the data
+					like a dual-axis histogram.
+					Each solidly colored bars represent the 2000 data, while the unfilled bars represent the 1900 data.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>The rationale behind this graph was to show both population pyramids in one graph, with the bars
+					interspersing with each other. </li>
+				<li>This way, the shapes of the pyramids (representing the age density per bin) can be directly
+					compared.</li>
+				<li>However, there is a significant weakness in that the axis of both pyramids is inherently different.
+					As such, it is difficult to see the 1900 data as well when there is much less data than the 2000
+					census.
+					In particular, for the age bins with the smallest populations (70+), the 1900 data will not appear.
+					While this shows how life expectancy has overall increases between 1900 and 2000, leading to more
+					people living longer, it does not answer the question we are asking: "the age density" as clearly.
+					Perhaps annotations would help in the next iteration.</li>
+			</ul>
+
+			<figure>
+				<img src="figs/Fig3.png" alt="" />
+				<figcaption>
+					The proposed figure shows the 1900 and 2000 census data as population pyramids, with the 1900 data
+					on the left side and the 2000 data on the right side.
+					The x-axis has the population size and the y-axis separates the ages into bins to display the data
+					like a dual-axis histogram.
+					The colors represent the male and female population splits in the 1900 and 2000 data. The annotated
+					percent markings show how much percent of the data is from the age bracket.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>The rationale behind this plot is to display both the 1900 and 2000 data in one plot, clearly
+					showing how the "age density" of bins have changed over time.</li>
+				<li>Here, gender is also displayed but not in the conventional male/female across axes way. This was
+					because the gender split isnt the main focus of the graph, but age density.</li>
+			</ul>
+
+			<h3>Reflection</h3>
+
+			<p>
+				Overall, while the three sketches are similar in their methods of displaying data (bar/population
+				pyramid styles), they show this data in different ways.
+				Plot 1 displays the data in a side by side manner, allowing the reader to see both population pyramids
+				and compare the age density between them, but they must switch between two plots, which makes comparison
+				a bit more difficult.
+				Plot 2 displays the data in one plot, but intersperses the bars. While this allows for direct
+				comparison, it mainly compares the quantity of people in age bin, rather than the density (or relative
+				percent of each bin). This means that this plot is good at conveying trends like "there are more 90 year
+				olds in 2000 than in 1900", but does not answer the questions of what percent of the population they
+				comprise.
+				Plot 3 also displays the data in one plot, but changes the traditional population pyramid structure of
+				male/female on left/right axes (as is shown in ecological textbooks and such), for displaying the
+				1900/2000 data on the left/right axes. To me, this makes more sense, because it is what is being
+				directly compared, and the shapes of the pyramid and annotations of relative percentages directly answer
+				the question of age density.
+				I think that Plot 3 is better than the other two for this reason: because it directly answers the
+				questions we are asking. In particular, it has different x-axis scales for the 1990 and 2000 data. While
+				I could have chosen to make them have the same axis, this would have shown trends similar to Plot 2
+				(overall increase in buckets), rather than density of bins.
+			</p>
+
+		</section>
+
+		<section>
+			<h2>Phase Two: Final Design</h2>
+
+			<figure>
+				<img src="figs/Final-Fig.png" alt="" />
+				<figcaption>
+					In this plot, we show a comparison of the census data between 1990 and 2000. The y-axis is the
+					different age bins, split by every 5 years. The bottom x-axis shows the population size in millions
+					and the upper x-axis shows the relative percent of each of the age bins of the total population from
+					that census year. The colors in each bar represent the split of female/male within each age bracket.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				I am trying to communicate the answer to the question "How does age density of different demographic
+				groups change between 1900 and 2000?" When thinking about these types of questions in the past, it
+				evokes the idea of "demographic transition", or when countries develop, their population demographic
+				splits often changes as fertility and mortality rates change. For example, a "expansive" population
+				pyramid represents a country with higher birth rates and low death rates, generally associated with
+				countries with poor medical care the very young/elderly and little birth control measures.
+
+				Traditional population pyramids show the male/female split on the left right/axis. Most of the
+				time, when pyramids are compared, they are done side by side, emphasizing the difference in population
+				split between sexes. However, for my question, I was not focusing on the sex split of the country, as
+				traditionally is done. Since I was primarily concerned with comparing the age densities, I chose to not
+				split the axes by sex, but by year instead, and maintain the sexes split in the color split of the bars.
+
+				Additionally, I decided to allow the two different time periods have different x-axes and not
+				standardize them. This was because I was more concerned over the shape of pyramid (the relative
+				percentages of each bin), rather than the total amount of people in each bin. I also decided to split
+				the buckets into bins of size 5, rather than 10 (as I did in the drawings) because they showed a more
+				clear demographic transition and breakdown of the population than the 10 year bins.
+
+				Furthermore, I decided to add annotations of the percent of the total for each bracket. I considered
+				also adding annotations for the sex splits (51%/49% for each bar), but I thought that would confuse the
+				reader with the excessive annotations. With the limited annotations, readers can directly see that, for
+				example, in 2000, the peak demographic in terms of size is 35-45, whereas in 2000, it was 0-5. These
+				decisions show that in 1900, the country was in the early stages of demographic transition, with high
+				percent of people in the younger ages and very few elderly.
+
+
+
+			</p>
+
+
+			<h3>Reflection</h3>
+
+			<p>
+				Phase 1 helped my final design in that I had a overall sense of how I wanted the plot to look (a
+				population pyramid style graph), but there were different ways of displaying information in that style.
+				I decided to disgard the idea of synching the axes, because it did not represent age density well
+				enough. After plot 2, I decided to add annotations of the relative percent to better reflect this
+				question. Contrary to the plots, I decided to increase the number of bins. Overall, plotting the
+				visualizations on paper first allowed me to improve my visualizations, which I believe increased in quality with each iteration. 
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
